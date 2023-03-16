@@ -14,5 +14,3 @@ export const init = (init: IWidget.Init<Props>) => (
         props: init.props
     })
 );
-const ExampleCounter = WidgetComp;
-export default ExampleCounter;
