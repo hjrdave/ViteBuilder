@@ -1,0 +1,31 @@
+//Seven Corners Brand
+$primary: #602651;
+$secondary: #ffb837;
+$dark: #4a4a4a;
+$dark-2: #333132;
+$grey: #ffffff;
+$grey-2: #c0c1c2;
+$grey-3: #5f636c;
+$success: #14a56f;
+$warning: #d8cf13;
+$danger: #e53b08;
+$info: #7952b3;
+$dark-slate-grey: #2c2e34;
+$black: #151415;
+
+//Fonts and Text (Bootstrap 5)
+$font-weight-light: 200;
+$font-weight-bold: 500;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.7;
+$h4-font-size: $font-size-base * 1.35;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+//Box Shadows (Bootstrap 5)
+$box-shadow: 0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075);
