@@ -33,12 +33,6 @@ export default function Header({widgets}: Props) {
                                     icon={<i className="fa-solid fa-cubes pe-2"></i>}
                                     subItems={buildWidgetList.map(item => ({...item, path: `widgets/${item.path}`}))}
                                 />
-                                <NavItem
-                                    text={'Playground'}
-                                    className={'pe-4 text-white'}
-                                    icon={<i className="fa-solid fa-cube pe-2"></i>}
-                                    subItems={buildWidgetList}
-                                />
                             </div>
                         </Col>
                     </Row>
