@@ -5,5 +5,8 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.examplecounter.config.ts",
+    "vite.examplecounter2.config.ts"
+  ]
 }

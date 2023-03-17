@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite --open",
+    "build:widgets": "tsc && vite build --config configs/ExampleCounter.config && tsc && vite build --config configs/ExampleCounter2.config"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",

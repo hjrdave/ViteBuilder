@@ -6,22 +6,23 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react(), cssInjectedByJsPlugin()],
   build: {
+    outDir: 'bundles/ExampleCounter2',
     minify: true,
     lib: {
-      entry: './src/widgets/ExampleCounter',
+      entry: './src/widgets/ExampleCounter2',
       name: 'SCWidget',
-      fileName: 'scwidget.bundle',
+      fileName: 'scwidget.examplecounter2.bundle',
+      formats: ['iife']
     },
     rollupOptions: {
-      external: [ 'react', 'react-dom', "react/jsx-runtime"],
+      external: [ 'react', 'react-dom'],
       output: {
-        format: 'umd',
-        globals: {
-          'react': 'React',
-          'react-dom': 'ReactDOM'
-        },
-        manualChunks: undefined,
+          globals: {
+              'react': 'React',
+              'react-dom': 'ReactDOM'
+          },
+          manualChunks: undefined
       }
-    }
+  }
   }
 })

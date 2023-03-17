@@ -1,5 +1,5 @@
 interface IWidgetBuilder{
     loading?: boolean;
-    BrokenComp?: any;
+    BrokenComp?: () => (JSX.Element);
 }
 export default IWidgetBuilder
