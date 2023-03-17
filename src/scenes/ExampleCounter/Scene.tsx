@@ -7,7 +7,7 @@ export default function Scene() {
     return (
         <>
             <WidgetBuilder align={"center"}>
-                <ExampleCounter message={'This is an Example Widget'} />
+                <ExampleCounter title={'Example Counter'} message={'This is an Example Widget'} />
             </WidgetBuilder>
         </>
     )

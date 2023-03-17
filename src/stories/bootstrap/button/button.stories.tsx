@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {within, userEvent} from '@storybook/testing-library';
 import { default as Comp } from 'react-bootstrap/Button';
 
 export default {
@@ -15,7 +16,7 @@ export default {
     },
     size: {
         options: [undefined, 'sm', 'lg'],
-        control: { type: 'select', labels: {undefined: 'default', sm: 'sm', lg: 'lg'} }
+        control: { type: 'inline-radio', labels: {undefined: 'default', sm: 'sm', lg: 'lg'} }
     }
   },
 } as ComponentMeta<typeof Comp>;
@@ -41,4 +42,15 @@ Primary.args = {
   style: {},
   btnCount: 1
 };
+export const Clicked = Template.bind({});
+Clicked.args = {
+  children: 'Primary',
+  variant: 'primary',
+  className: "m-1"
+};
+Clicked.play = async ({canvasElement}) => {
+  const canvas = within(canvasElement);
+  const btn = canvas.getByRole('button');
+  await userEvent.click(btn);
+}
 
