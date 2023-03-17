@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 
 interface Props{
-    variant?: 'button' | 'control';
+    variant?: 'button' | 'control' | 'default';
 };
 
 export default function BrokenCompFallback({ variant }: Props){
