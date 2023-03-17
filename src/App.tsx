@@ -3,7 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/organisms/Header';
 import Routes from './Routes';
-import widgetMap from './widget-map';
+import widgetMap from './route-map';
 import "./App.scss";
 
 function App() {

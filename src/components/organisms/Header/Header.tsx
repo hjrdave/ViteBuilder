@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
-import { IWidgetMap } from '../../../widget-map';
+import { IWidgetMap } from '../../../route-map';
 import NavItem from '../../molecules/NavItem';
 
 interface Props{
@@ -31,6 +31,12 @@ export default function Header({widgets}: Props) {
                                     text={'Widgets'}
                                     className={'pe-4 text-white'}
                                     icon={<i className="fa-solid fa-cubes pe-2"></i>}
+                                    subItems={buildWidgetList.map(item => ({...item, path: `widgets/${item.path}`}))}
+                                />
+                                <NavItem
+                                    text={'Playground'}
+                                    className={'pe-4 text-white'}
+                                    icon={<i className="fa-solid fa-cube pe-2"></i>}
                                     subItems={buildWidgetList}
                                 />
                             </div>
