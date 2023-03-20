@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite --open",
     "build:widgets": "tsc && vite build --config configs/ExampleCounter.config && tsc && vite build --config configs/ExampleCounter2.config",
-    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 ",
-    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook"
+    "storybook: run": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "storybook: build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "storybook:clean-cache": "rm -rf node_modules/.cache/storybook"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",

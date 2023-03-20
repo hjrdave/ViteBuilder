@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import {default as Comp} from './ExampleCounter';
 
 export default {
-  title: 'Design System/Widgets/ExampleCounter',
+  title: 'Widgets/ExampleCounter',
   component: Comp,
   argTypes: {
     error: {
