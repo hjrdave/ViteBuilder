@@ -1,5 +1,6 @@
-import IForm from "../../organisms/Form/IForm";
-export default interface FormControlProps extends IForm.BaseControlProps {
+import Form from "../../organisms/Form/Form.interface";
+
+export default interface FormControl extends Form.BaseControlProps {
     placeholder?: string;
     type?: string;
     as?: 'input' | 'textarea' | React.ElementType;

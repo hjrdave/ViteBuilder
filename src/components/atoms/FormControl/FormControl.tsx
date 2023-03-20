@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, InputGroup } from 'react-bootstrap';
-import FormControlProps from './FormControlProps';
+import FormControl from './FormControl.interface';
 
-export default function FormControl({ className, label, htmlFor, ariaDescribedby, caption, captionId, appendControl, prependControl, ariaLabel, maxLength, required, ...props }: FormControlProps) {
+export default function FormControl({ className, label, htmlFor, ariaDescribedby, caption, captionId, appendControl, prependControl, ariaLabel, maxLength, required, ...props }: FormControl) {
 
     return (
         <>

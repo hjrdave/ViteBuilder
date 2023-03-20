@@ -1,5 +1,25 @@
 import { ButtonVariant } from "react-bootstrap/esm/types";
-declare namespace IForm {
+import {Props as FormProps} from './Form'; 
+import TextControl from "../../molecules/TextControl";
+import TextAreaControl from "../../molecules/TextAreaControl";
+import PhoneControl from "../../molecules/PhoneControl";
+import NumberControl from "../../molecules/NumberControl";
+import EmailControl from "../../molecules/EmailControl";
+import FormSubmit from "../../atoms/FormSubmit";
+import FormReset from "../../atoms/FormReset";
+
+declare namespace Form {
+
+    export interface SubComponents{
+        (props: FormProps): JSX.Element;
+        Text: typeof TextControl;
+        TextArea: typeof TextAreaControl;
+        Phone: typeof PhoneControl;
+        Number: typeof NumberControl;
+        Email: typeof EmailControl;
+        Submit: typeof FormSubmit;
+        Reset: typeof FormReset;
+    }
     export interface BaseControlProps {
         ref?: any;
         name: string;
@@ -32,4 +52,4 @@ declare namespace IForm {
         onClick?: (e: any) => void;
     }
 }
-export default IForm;
+export default Form;

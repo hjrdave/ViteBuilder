@@ -1,14 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {default as Comp} from './BrokenCompFallback';
+
+import {default as Comp} from "./RangeControl";
 
 export default {
-  title: 'Design System/Atoms/BrokenCompFallback',
+  title: 'Design System/Atoms/RangeControl',
   component: Comp,
   argTypes: {
-    variant: {
-      control: {type: 'inline-radio'}
-    }
   },
 } as ComponentMeta<typeof Comp>;
 
@@ -16,5 +14,7 @@ const Template: ComponentStory<typeof Comp> = (args) => <Comp {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    variant: undefined
+  label: "Range Control",
+  className: "",
+  disabled: false
 };
