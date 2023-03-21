@@ -5,12 +5,12 @@ import CardBadge from '../../atoms/CardBadge';
 
 interface Props{
     title?: string;
-    startingAt: string;
+    startingAt?: string;
     includes?: {
         text: JSX.Element | string;
     }[];
     onSelect?: () => void;
-    isRecommended: boolean;
+    isRecommended?: boolean;
 };
 
 export default function ProductCard({title, startingAt, includes, onSelect, isRecommended}: Props){
