@@ -6,12 +6,14 @@ import styles from './ExampleCounter.module.scss';
 
 interface Props extends IWidgetBuilder {
     message?: string;
+    title?: string;
 }
-export default function ExampleCounter({message, ...props }: Props) {
+export default function ExampleCounter({message, title, loading }: Props) {
+    
     return (
         <>
-            <WidgetContainer className={styles.compContainer} {...props}>
-                <ExampleCounterComp message={message} />
+            <WidgetContainer className={styles.compContainer} loading={loading}>
+                <ExampleCounterComp title={title} message={message} />
             </WidgetContainer>
         </>
     )

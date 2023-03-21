@@ -41,6 +41,14 @@ body {
 .btn-danger {
     color: white;
 }
+.btn-bg-none{
+    box-shadow: none;
+    background-image: none;
+    border: none;
+    &:active{
+        border: none;
+    }
+}
 .btn-danger.btn-lg {
     color: white;
 }

@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react';
+import uniqid from 'uniqid';
 import { IWidgetBuilder } from '../../templates/WidgetBuilder';
 import ErrorBoundary from '../../atoms/ErrorBoundary';
 
@@ -7,7 +8,7 @@ interface Props extends IWidgetBuilder{
     className?: string;
     style?: CSSProperties;
 };
-export default function WidgetContainer({ children, className, style, loading, BrokenComp }: Props){
+export default function WidgetContainer({ children, className, style, loading }: Props){
 
     return(
         <>
@@ -15,7 +16,6 @@ export default function WidgetContainer({ children, className, style, loading, B
                 <ErrorBoundary>
                     <>
                         {(loading) ? <p className={'p-3 mb-0'}>Loading...</p> : children}
-                        {(BrokenComp) ? <BrokenComp/> : null}
                     </>
                 </ErrorBoundary>
             </div>
