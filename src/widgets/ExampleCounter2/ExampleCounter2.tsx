@@ -8,10 +8,10 @@ interface Props extends IWidgetBuilder {
     message?: string;
     title?: string;
 }
-export default function ExampleCounter2({message, title, loading, error }: Props) {
+export default function ExampleCounter2({message, title, loading }: Props) {
     return (
         <>
-            <WidgetContainer className={styles.compContainer} loading={loading} error={error}>
+            <WidgetContainer className={styles.compContainer} loading={loading}>
                 <ExampleCounterComp title={title} message={message} />
             </WidgetContainer>
         </>
