@@ -1,9 +1,8 @@
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {default as Comp} from "./AddOnCard";
-
+import { default as Comp } from './AddOnCard';
 
 export default {
   title: 'Design System/Molecules/AddOnCard',
@@ -12,9 +11,9 @@ export default {
     btnType: {
       options: ['add', 'remove'],
       control: {
-        type: 'select'
-      }
-    }
+        type: 'select',
+      },
+    },
   },
 } as ComponentMeta<typeof Comp>;
 
@@ -28,11 +27,10 @@ const Template: ComponentStory<typeof Comp> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-    title: "Interruption for any reason (IFAR)",
-    description: "Coverage for up to 75% of your trip if your trip is interrupted for any reason.",
-    tellMeMoreLink: "",
-    btnType: "add",
-    onClick: () => alert('clicked'),
-    price: "$5.22"
+  title: 'Interruption for any reason (IFAR)',
+  description: 'Coverage for up to 75% of your trip if your trip is interrupted for any reason.',
+  tellMeMoreLink: '',
+  btnType: 'add',
+  onClick: () => alert('clicked'),
+  price: '$5.22',
 };
-

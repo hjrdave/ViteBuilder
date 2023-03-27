@@ -1,3 +1,3 @@
-import CardBadge from "./CardBadge";
+import CardBadge from './CardBadge';
 
 export default CardBadge;

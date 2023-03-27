@@ -1,71 +1,71 @@
-@import "./variables.scss";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import './variables.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: $gray-200;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $gray-200;
 }
 
 //buttons
 .btn {
-    box-shadow: $box-shadow-sm;
-    border-radius: 0.5rem;
-    text-transform: uppercase;
-    padding: 0.7rem 1.26rem 0.6rem 1.26rem;
-    font-size: $font-size-base - 0.2rem;
-    background-image: var(--bs-gradient);
-    font-weight: 550;
+  box-shadow: $box-shadow-sm;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  padding: 0.7rem 1.26rem 0.6rem 1.26rem;
+  font-size: $font-size-base - 0.2rem;
+  background-image: var(--bs-gradient);
+  font-weight: 550;
 }
 .btn-lg {
-    font-size: $font-size-base + 0.1rem;
+  font-size: $font-size-base + 0.1rem;
 }
 .btn-sm {
-    font-size: $font-size-base - 0.3rem;
+  font-size: $font-size-base - 0.3rem;
 }
 .btn-secondary {
-    text-shadow: 0px 0px 19px $dark;
-    color: white;
+  text-shadow: 0px 0px 19px $dark;
+  color: white;
 }
 .btn-secondary.btn-lg {
-    color: white;
+  color: white;
 }
 .btn-link {
-    box-shadow: none;
+  box-shadow: none;
 }
 .btn-success {
-    color: white;
+  color: white;
 }
 .btn-success.btn-lg {
-    color: white;
+  color: white;
 }
 .btn-danger {
-    color: white;
+  color: white;
 }
-.btn-bg-none{
-    box-shadow: none;
-    background-image: none;
+.btn-bg-none {
+  box-shadow: none;
+  background-image: none;
+  border: none;
+  &:active {
     border: none;
-    &:active{
-        border: none;
-    }
+  }
 }
 .btn-danger.btn-lg {
-    color: white;
+  color: white;
 }
 .btn.dropdown-toggle {
-    background-image: none;
-    text-transform: none;
+  background-image: none;
+  text-transform: none;
 }
 
 //cards
 .card {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 .card-header {
-    border-bottom: 0px;
-    background-color: white;
+  border-bottom: 0px;
+  background-color: white;
 }
 .card-footer {
-    border-top: 0px;
-    background-color: white;
+  border-top: 0px;
+  background-color: white;
 }

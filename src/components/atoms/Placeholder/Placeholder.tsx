@@ -4,25 +4,18 @@ import styles from './Placeholder.module.scss';
 
 type rowSizes = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 interface Props {
-    rowSizes: rowSizes[];
+  rowSizes: rowSizes[];
 }
 export default function Placeholder({ rowSizes }: Props) {
-
-    return (
-        <>
-            <BSPlaceholder animation="wave">
-                {
-                    rowSizes.map((size, index) => (
-                        <React.Fragment key={index}>
-                            <BSPlaceholder
-                                className={styles.compContainer}
-                                xs={size}
-                                key={index}
-                            />{' '}
-                        </React.Fragment>
-                    ))
-                }
-            </BSPlaceholder>
-        </>
-    )
+  return (
+    <>
+      <BSPlaceholder animation='wave'>
+        {rowSizes.map((size, index) => (
+          <React.Fragment key={index}>
+            <BSPlaceholder className={styles.compContainer} xs={size} key={index} />{' '}
+          </React.Fragment>
+        ))}
+      </BSPlaceholder>
+    </>
+  );
 }

@@ -1,4 +1,4 @@
-interface IWidgetBuilder{
-    loading?: boolean;
+interface IWidgetBuilder {
+  loading?: boolean;
 }
-export default IWidgetBuilder
+export default IWidgetBuilder;

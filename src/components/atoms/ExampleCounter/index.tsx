@@ -1,3 +1,3 @@
-import ExampleCounter from "./ExampleCounter";
+import ExampleCounter from './ExampleCounter';
 
 export default ExampleCounter;

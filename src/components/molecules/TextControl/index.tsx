@@ -1,3 +1,3 @@
-import TextControl from "./TextControl";
+import TextControl from './TextControl';
 
 export default TextControl;

@@ -1,11 +1,11 @@
-@use "../../../variables.scss" as *;
+@use '../../../variables.scss' as *;
 
-.compContainer{
-    background-color: $grey-3;
-    .prevIcon{
-        transition: opacity .2s;
-        &:hover{
-            opacity: .7;
-        }
+.compContainer {
+  background-color: $grey-3;
+  .prevIcon {
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.7;
     }
+  }
 }

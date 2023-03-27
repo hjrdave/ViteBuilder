@@ -3,32 +3,33 @@ import { useNonInitialEffect } from 'react-cork';
 import FormControl, { FormControlProps } from '../../atoms/FormControl';
 import useControlledInput from '../../../hooks/useControlledInput';
 
-interface Props extends FormControlProps { };
+type Props = FormControlProps;
 
-export default function TextControl({ value, name, onChange, debounceTime, persist, ...props }: Props) {
+export default function TextControl({
+  value,
+  name,
+  onChange,
+  debounceTime,
+  persist,
+  ...props
+}: Props) {
+  const controlId = 'text';
+  const _name = name;
+  const { controlValue, setControlValue, bind } = useControlledInput({
+    name: name,
+    inputValue: value,
+    onChange: onChange,
+    debounceTime: debounceTime,
+    persistValue: persist,
+  });
 
-    const controlId = 'text';
-    const _name = name;
-    const { controlValue, setControlValue, bind } = useControlledInput({
-        name: name,
-        inputValue: value,
-        onChange: onChange,
-        debounceTime: debounceTime,
-        persistValue: persist
-    });
+  useNonInitialEffect(() => {
+    setControlValue(controlValue);
+  }, [controlValue]);
 
-    useNonInitialEffect(() => {
-        setControlValue(controlValue);
-    }, [controlValue]);
-
-
-    return (
-        <>
-            <FormControl
-                {...props}
-                {...bind}
-                name={_name}
-            />
-        </>
-    )
+  return (
+    <>
+      <FormControl {...props} {...bind} name={_name} />
+    </>
+  );
 }

@@ -9,11 +9,7 @@
     "storybook: run": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "storybook: build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "storybook:clean-cache": "rm -rf node_modules/.cache/storybook",
-    "lint": "npx eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "prettier": "npx prettier src --check",
-    "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run prettier:fix && npm run lint:fix"
+    "prettier:format": "npm run prettier -- --write"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
@@ -44,13 +40,6 @@
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.6.2",
     "babel-loader": "^8.3.0",
     "path": "^0.12.7",

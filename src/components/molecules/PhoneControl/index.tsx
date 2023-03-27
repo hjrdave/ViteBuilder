@@ -1,3 +1,3 @@
-import PhoneControl from "./PhoneControl";
+import PhoneControl from './PhoneControl';
 
 export default PhoneControl;

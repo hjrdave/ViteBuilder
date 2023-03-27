@@ -4,32 +4,34 @@ import useControlledInput from '../../../hooks/useControlledInput';
 import { useNonInitialEffect } from 'react-cork';
 
 interface Props extends FormControlProps {
-    value?: string;
-};
+  value?: string;
+}
 
-export default function PhoneControl({ value, name, onChange, placeholder, debounceTime, persist, ...props }: Props) {
+export default function PhoneControl({
+  value,
+  name,
+  onChange,
+  placeholder,
+  debounceTime,
+  persist,
+  ...props
+}: Props) {
+  const controlId = 'Phone';
+  const _name = name;
+  const { controlValue, setControlValue, bind } = useControlledInput({
+    name: name,
+    inputValue: value,
+    onChange: onChange,
+    debounceTime: debounceTime,
+  });
 
-    const controlId = 'Phone';
-    const _name = name;
-    const { controlValue, setControlValue, bind } = useControlledInput({
-        name: name,
-        inputValue: value,
-        onChange: onChange,
-        debounceTime: debounceTime
-    });
+  useNonInitialEffect(() => {
+    setControlValue(controlValue);
+  }, [controlValue]);
 
-    useNonInitialEffect(() => {
-        setControlValue(controlValue);
-    }, [controlValue]);
-
-    return (
-        <>
-            <FormControl
-                {...props}
-                {...bind}
-                name={_name}
-                placeholder={placeholder ?? '___-___-____'}
-            />
-        </>
-    )
+  return (
+    <>
+      <FormControl {...props} {...bind} name={_name} placeholder={placeholder ?? '___-___-____'} />
+    </>
+  );
 }

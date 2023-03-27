@@ -1,3 +1,3 @@
-import PlaceholderBlocks from "./PlaceholderBlocks";
+import PlaceholderBlocks from './PlaceholderBlocks';
 
 export default PlaceholderBlocks;

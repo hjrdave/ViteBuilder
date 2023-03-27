@@ -1,3 +1,3 @@
-import CheckControl from "./CheckControl";
+import CheckControl from './CheckControl';
 
 export default CheckControl;

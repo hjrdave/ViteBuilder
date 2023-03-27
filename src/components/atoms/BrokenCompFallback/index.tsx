@@ -1,3 +1,3 @@
-import BrokenCompFallback from "./BrokenCompFallback";
+import BrokenCompFallback from './BrokenCompFallback';
 
 export default BrokenCompFallback;

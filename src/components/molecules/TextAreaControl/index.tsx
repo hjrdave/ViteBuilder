@@ -1,3 +1,3 @@
-import TextAreaControl from "./TextAreaControl";
+import TextAreaControl from './TextAreaControl';
 
 export default TextAreaControl;

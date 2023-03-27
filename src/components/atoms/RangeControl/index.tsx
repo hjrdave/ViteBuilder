@@ -1,3 +1,3 @@
-import RangeControl from "./RangeControl";
+import RangeControl from './RangeControl';
 
 export default RangeControl;

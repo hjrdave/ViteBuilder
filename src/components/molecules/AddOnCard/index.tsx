@@ -1,3 +1,3 @@
-import AddOnCard from "./AddOnCard";
+import AddOnCard from './AddOnCard';
 
 export default AddOnCard;

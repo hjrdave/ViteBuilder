@@ -1,5 +1,5 @@
-import WidgetBuilder from "./WidgetBuilder";
-import type IWidgetBuilder from "./IWidgetBuilder";
+import WidgetBuilder from './WidgetBuilder';
+import type IWidgetBuilder from './IWidgetBuilder';
 
-export {IWidgetBuilder}
+export { IWidgetBuilder };
 export default WidgetBuilder;

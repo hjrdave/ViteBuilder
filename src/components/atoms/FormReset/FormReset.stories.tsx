@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {default as Comp} from "./FormReset";
+import { default as Comp } from './FormReset';
 
 export default {
   title: 'Design System/Atoms/FormReset',
@@ -9,8 +9,8 @@ export default {
   argTypes: {
     size: {
       options: [undefined, 'sm', 'lg'],
-      control: { type: 'select', labels: {undefined: 'default', sm: 'sm', lg: 'lg'} }
-  }
+      control: { type: 'select', labels: { undefined: 'default', sm: 'sm', lg: 'lg' } },
+    },
   },
 } as ComponentMeta<typeof Comp>;
 
@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof Comp> = (args) => <Comp {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  className: "",
+  className: '',
   active: false,
-  size: {} as any
+  size: {} as any,
 };

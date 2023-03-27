@@ -1,9 +1,9 @@
 .compContainer {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }

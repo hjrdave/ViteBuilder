@@ -1,3 +1,3 @@
-import PreviousPageBar from "./PreviousPageBar";
+import PreviousPageBar from './PreviousPageBar';
 
 export default PreviousPageBar;

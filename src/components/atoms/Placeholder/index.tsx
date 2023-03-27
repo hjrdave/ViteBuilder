@@ -1,3 +1,3 @@
-import PlaceHolder from "./Placeholder";
+import PlaceHolder from './Placeholder';
 
 export default PlaceHolder;
