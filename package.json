@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite --open",
     "widgets:build": "tsc && vite build --config configs/ExampleCounter.config && tsc && vite build --config configs/ExampleCounter2.config",
-    "storybook: run": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "storybook: build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "storybook: run": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "storybook: build": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "storybook:clean-cache": "rm -rf node_modules/.cache/storybook",
     "prettier:format": "npm run prettier -- --write"
   },
@@ -40,9 +40,10 @@
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
-    "prettier": "^2.6.2",
     "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
     "path": "^0.12.7",
+    "prettier": "^2.6.2",
     "sass": "^1.59.3",
     "storybook-addon-pseudo-states": "^1.15.2",
     "storybook-dark-mode": "^2.1.1",
