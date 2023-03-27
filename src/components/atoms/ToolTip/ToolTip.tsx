@@ -38,8 +38,8 @@ export default function ToolTip({
         }
       >
         <Button
-          variant={'bg-none'}
-          className={`text-capitalize p-2 ${
+          variant={'link'}
+          className={`text-capitalize text-decoration-none p-2 ${
             label ? 'fs-7' : 'fs-6'
           } fw-normal ${textColor} ${className}`}
           style={style}

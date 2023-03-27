@@ -42,6 +42,18 @@ const Template: ComponentStory<typeof Comp> = ({ btnCount, ...args }) => (
     ))}
   </>
 );
+const IconLinkTemplate: ComponentStory<typeof Comp> = ({ icon, children, ...args }) => (
+  <>
+    <Comp
+      {...args}
+      variant={'link'}
+      className={`text-capitalize p-2 fs-7 fw-normal ${args.className}`}
+    >
+      <i className='fa-regular fa-envelope pe-2'></i>
+      {children}
+    </Comp>
+  </>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -51,9 +63,19 @@ Primary.args = {
   size: undefined,
   type: 'button',
   variant: 'primary',
+  href: '',
   className: 'm-1',
   style: {},
   btnCount: 1,
+};
+export const IconLink = IconLinkTemplate.bind({});
+IconLink.args = {
+  children: 'Email Quote',
+  href: '',
+  active: false,
+  disabled: false,
+  className: 'm-1',
+  style: {},
 };
 export const Clicked = Template.bind({});
 Clicked.args = {
