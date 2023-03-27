@@ -1,15 +1,15 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Copy from './Copy';
+import Comp from './Copy';
 
 export default {
   title: 'Design System/Atoms/Copy',
-  component: Copy,
+  component: Comp,
   argTypes: {},
-} as ComponentMeta<typeof Copy>;
+} as ComponentMeta<typeof Comp>;
 
-const Template: ComponentStory<typeof Copy> = (args) => <Copy {...args} />;
+const Template: ComponentStory<typeof Comp> = (args) => <Comp {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
