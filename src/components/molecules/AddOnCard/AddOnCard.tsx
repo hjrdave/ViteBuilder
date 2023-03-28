@@ -27,8 +27,14 @@ export default function AddOnCard({
                 <div>
                   <p className={'text-primary fw-bold mb-0'}>{title}</p>
                   <p>{description}</p>
-                  <Button variant='link' onClick={onClick} href={tellMeMoreLink} className={'ps-0'}>
-                    <i className='fa-regular fa-circle-question pe-2 fs-6'></i>
+                  <Button
+                    className='text-capitalize p-2 ps-0 fs-7 fw-normal m-1'
+                    style={{}}
+                    variant='link'
+                    onClick={onClick}
+                    href={tellMeMoreLink}
+                  >
+                    <i className='fa-regular fa-circle-question pe-2' />
                     Tell me more
                   </Button>
                 </div>
