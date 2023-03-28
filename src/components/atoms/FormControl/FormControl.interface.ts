@@ -4,7 +4,6 @@ export default interface FormControl extends Form.BaseControlProps {
   placeholder?: string;
   type?: string;
   as?: 'input' | 'textarea' | React.ElementType;
-  size?: 'sm' | 'lg';
   htmlSize?: number;
   plaintext?: boolean;
   readOnly?: boolean;
@@ -15,8 +14,6 @@ export default interface FormControl extends Form.BaseControlProps {
   captionId?: string;
   hasValidation?: boolean;
   debounceTime?: number;
-  appendControl?: JSX.Element;
-  prependControl?: JSX.Element;
   maxLength?: number;
   min?: number;
   max?: number;

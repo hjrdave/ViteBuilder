@@ -32,6 +32,14 @@ body {
 .btn-link {
   box-shadow: none;
 }
+.btn-bg-none {
+  box-shadow: none;
+  background-image: none;
+  border: none;
+  &:active {
+    border: none;
+  }
+}
 .btn-success {
   color: white;
 }
@@ -40,14 +48,6 @@ body {
 }
 .btn-danger {
   color: white;
-}
-.btn-bg-none {
-  box-shadow: none;
-  background-image: none;
-  border: none;
-  &:active {
-    border: none;
-  }
 }
 .btn-danger.btn-lg {
   color: white;
@@ -68,4 +68,35 @@ body {
 .card-footer {
   border-top: 0px;
   background-color: white;
+}
+
+//controls
+.form-label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.form-control {
+  font-size: 0.9rem;
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+  border-radius: 0.25rem;
+}
+.valid-feedback {
+  color: $primary;
+}
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: #ced4da;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23602651' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  &:focus {
+    border-color: #ced4da;
+    box-shadow: 0 0 0 0.25rem rgba(96, 38, 81, 0.25);
+  }
+}
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: #ced4da;
+  &:focus {
+    border-color: #ced4da;
+    box-shadow: 0 0 0 0.25rem rgba(96, 38, 81, 0.25);
+  }
 }

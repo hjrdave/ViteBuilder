@@ -1,16 +1,15 @@
 import React from 'react';
-import { Form, InputGroup } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import FormControl from './FormControl.interface';
 
 export default function FormControl({
   className,
+  controlClassName,
   label,
   htmlFor,
   ariaDescribedby,
   caption,
   captionId,
-  appendControl,
-  prependControl,
   ariaLabel,
   maxLength,
   required,
@@ -18,26 +17,24 @@ export default function FormControl({
 }: FormControl) {
   return (
     <>
-      <Form.Group>
+      <Form.Group className={className}>
         <Form.Label htmlFor={htmlFor}>{required ? `${label} *` : label}</Form.Label>
-        <InputGroup className={className}>
-          <>
-            {prependControl ? <>{prependControl}</> : <></>}
-            <Form.Control
-              {...props}
-              aria-label={ariaLabel}
-              aria-describedby={ariaDescribedby}
-              maxLength={maxLength ?? 255}
-              required={required}
-            />
-            {appendControl ? <>{appendControl}</> : <></>}
-          </>
-          <Form.Control.Feedback>Looks good</Form.Control.Feedback>
-          <Form.Control.Feedback type='invalid'>Does Not look good</Form.Control.Feedback>
-        </InputGroup>
-        <Form.Text id={captionId} muted>
-          {caption}
-        </Form.Text>
+        <>
+          <Form.Control
+            {...props}
+            size={undefined} //make sure that size is not specified
+            className={`${controlClassName}`}
+            aria-label={ariaLabel}
+            aria-describedby={ariaDescribedby}
+            maxLength={maxLength ?? 255}
+            required={required}
+          />
+        </>
+        {caption ? (
+          <Form.Text id={captionId} muted>
+            {caption}
+          </Form.Text>
+        ) : null}
       </Form.Group>
     </>
   );

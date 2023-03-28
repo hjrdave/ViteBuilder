@@ -31,6 +31,7 @@ declare namespace Form {
     tabIndex?: number;
     value?: string | any[] | number;
     className?: string;
+    controlClassName?: string;
     bsPrefix?: string;
     required?: boolean;
     onChange?: (e: any) => void;
@@ -44,7 +45,6 @@ declare namespace Form {
     className?: string;
     active?: boolean;
     disabled?: boolean;
-    size?: 'sm' | 'lg';
     variant?: ButtonVariant;
     bsPrefix?: string;
     children?: JSX.Element | JSX.Element[];
